@@ -4,9 +4,6 @@ import axiosAPI from "./axiosAPI";
 import Table from "./board";
 import './App.css';
 
-const port = process.env.PORT || 4000;
-app.listen(port);
-
 const LARGE_DESKTOP_BREAKPOINT = 1366;
 const SMALL_DESKTOP_BREAKPOINT = 1024;
 const TABLET_BREAKPOINT = 768;
