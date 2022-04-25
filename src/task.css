@@ -1,0 +1,66 @@
+.Titleheader{
+    font-family: Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 36px;
+}
+.Subheader{
+    font-family: Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 32px;
+    padding-bottom: 30px;
+    border-bottom: black 3px solid;
+    border-radius: 3px;
+}
+.card{
+    width: 80%;
+    background-color: white;
+    border-radius: 3px;
+    margin: 9px;
+    padding: 5px 8px 20px 20px;
+    font-family: Arial, sans-serif;
+    font-weight: lighter;
+}
+.table1{
+    content: "";
+    width: 85%;
+    alignment: left;
+    border-spacing: 0;
+    margin-left: 20px;
+    padding-bottom: 48px;
+    border-bottom: black 3px solid;
+}
+.th{
+    font-size: 28px;
+    padding-left: 15px;
+    background-color: #DEDEDE;
+    font-family: Arial, sans-serif;
+    font-weight: lighter;
+    text-align: left;
+}
+.tr{
+    vertical-align: top;
+    horiz-align: left;
+    max-width: 25%;
+}
+.td{
+    background: #DEDEDE;
+    margin: 0 auto;
+    width: 25%;
+}
+h2{
+    font-family: Arial, sans-serif;
+}
+h2, p{
+    font-weight: lighter;
+    line-height: 1.1;
+}
+.todo, .review{
+    background-color: lightgray;
+}
+button{
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 100%;
+    color: #0a9aff;
+}
