@@ -4,7 +4,7 @@ const openPosts = axios.create({
     baseURL: 'http://my-json-server.typicode.com/bnissen24/project2DB/posts'
 });
 
-const getPosts = async() => {
+const getData = async() => {
     try {
         const response = await openPosts.get("");
         console.log(response.data);
@@ -16,4 +16,4 @@ const getPosts = async() => {
 };
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default{ getPosts }
+export default{ getData }

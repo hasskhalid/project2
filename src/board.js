@@ -7,7 +7,7 @@ function Table(props){
     const{ post } = props;
     const{ changeStatus } = props;
     return (
-        <table className = { "table1" }>
+        <table className = { "board" }>
             <thead>
             <tr className = { "tr" }>
                 <th className = { "th todo" }>To Do</th>

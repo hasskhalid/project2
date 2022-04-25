@@ -11,16 +11,25 @@
     border-bottom: black 3px solid;
     border-radius: 3px;
 }
-.card{
+.Viewheader{
+    font-family: Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 18px;
+    color: blue;
+    padding-left: 40px;
+    padding-top: 40px;
+}
+.tasks{
     width: 80%;
     background-color: white;
+
     border-radius: 3px;
     margin: 9px;
-    padding: 5px 8px 20px 20px;
+    padding: 5px 8px 3px 20px;
     font-family: Arial, sans-serif;
     font-weight: lighter;
 }
-.table1{
+.board{
     content: "";
     width: 85%;
     alignment: left;
@@ -29,8 +38,15 @@
     padding-bottom: 48px;
     border-bottom: black 3px solid;
 }
+.border {
+    border: 2px solid black;
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+}
 .th{
     font-size: 28px;
+    padding-top: 20px;
     padding-left: 15px;
     background-color: #DEDEDE;
     font-family: Arial, sans-serif;

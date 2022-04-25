@@ -46,9 +46,7 @@ class App extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
-    const {view, posts} = this.state;
-
-    console.log("ComponentDidUpdate", posts);
+    const {view} = this.state;
 
     if(prevState.view !== view) {
       this.render()
@@ -58,7 +56,7 @@ class App extends React.Component {
   async getNewPosts() {
 
     try {
-      const response = await axiosAPI.getPosts();
+      const response = await axiosAPI.getData();
       this.setState({posts: response});
     } catch (error) {
       this.setState({error: error.message});
@@ -86,6 +84,7 @@ class App extends React.Component {
         <div>
           <h1 className={"Titleheader"}>To-Do or Not To-Do</h1>
           <h1 className={"Subheader"}>Task Board</h1>
+          <h3 className={"Viewheader"}>Grid View</h3>
           <Table changeStatus={this.changeStatus} post = {posts}/>
         </div>
     );

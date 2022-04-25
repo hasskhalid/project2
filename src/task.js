@@ -9,7 +9,7 @@ function Cards(props) {
         changeStatus
     } = props;
     return(
-        <div className = "card">
+        <div className = "tasks">
             <h2>
                 {post.title}
             </h2>
