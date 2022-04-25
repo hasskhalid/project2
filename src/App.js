@@ -56,7 +56,7 @@ class App extends React.Component {
   async getNewPosts() {
 
     try {
-      const response = await axiosAPI.getData();
+      const response = await axiosAPI.getPosts();
       this.setState({posts: response});
     } catch (error) {
       this.setState({error: error.message});
