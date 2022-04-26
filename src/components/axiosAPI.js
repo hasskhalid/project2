@@ -1,19 +1,18 @@
 import axios from 'axios';
 
 const openPosts = axios.create({
-    baseURL: 'https://my-json-server.typicode.com/bnissen24/project2DB/posts'
+    baseURL: 'https://my-json-server.typicode.com/hasskhalid/database/posts',
 });
 
-const getPosts = async() => {
+const getTasks = async() => {
     try {
         const response = await openPosts.get("");
         console.log(response.data);
         return response.data;
     } catch(error) {
-        console.error('', error);
+        console.error('Error making API Request', error);
         throw error;
     }
 };
 
-// eslint-disable-next-line import/no-anonymous-default-export
-export default{ getPosts }
+export default{ getTasks }

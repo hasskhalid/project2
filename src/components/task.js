@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './task.css';
+import './style/task.css';
 
-function Cards(props) {
+function Tasks(props) {
     const{
         post,
         buttons,
@@ -47,13 +47,13 @@ function Cards(props) {
     );
 }
 
-Cards.propTypes = {
+Tasks.propTypes = {
     post: PropTypes.object,
     buttons: PropTypes.array,
     changeStatus: PropTypes.func.isRequired,
 };
-Cards.defaultProps = {
+Tasks.defaultProps = {
     post: null,
     buttons: null,
 };
-export default Cards;
+export default Tasks;

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axiosAPI from "./axiosAPI";
 import Table from "./board";
-import './App.css';
+import './style/App.css';
 
 const LARGE_DESKTOP_BREAKPOINT = 1366;
 const SMALL_DESKTOP_BREAKPOINT = 1024;
@@ -16,15 +16,14 @@ class App extends React.Component {
     this.state = {
       view: "grid",
       posts: [],
-      error: null,
+      errorMessage: '',
       browserwidth: 0,
-      breakpoint: 'large-desktop'
+      breakpoint: 'large-desktop',
     };
   }
 
   componentDidMount() {
-    this.getNewPosts();
-    console.log(" ComponentDidMOUNT");
+    this.getNewTasks();
 
     window.addEventListener('resize', this.handleResize);
     this.handleResize();
@@ -45,6 +44,7 @@ class App extends React.Component {
     this.setState({ breakpoint, browserWidth });
   }
 
+
   componentDidUpdate(prevProps, prevState, snapshot) {
     const {view} = this.state;
 
@@ -53,10 +53,10 @@ class App extends React.Component {
     }
   }
 
-  async getNewPosts() {
+  async getNewTasks() {
 
     try {
-      const response = await axiosAPI.getPosts();
+      const response = await axiosAPI.getTasks();
       this.setState({posts: response});
     } catch (error) {
       this.setState({error: error.message});
@@ -70,18 +70,15 @@ class App extends React.Component {
   changeStatus = (value) => {
     const {posts} = this.state;
     const arr = value.split(",");
-    console.log(posts[arr[0] - 1]);
     posts[arr[0] - 1].column = arr[1];
-    console.log(posts[arr[0] - 1]);
     this.setState({posts: posts, view: "grid"});
   };
 
   render(){
     const{posts} = this.state;
-    console.log("This was rendered");
 
     return(
-        <div>
+        <div className={ 'container ${this.state.breakpoint}' }>
           <h1 className={"Titleheader"}>To-Do or Not To-Do</h1>
           <h1 className={"Subheader"}>Task Board</h1>
           <h3 className={"Viewheader"}>Grid View</h3>
